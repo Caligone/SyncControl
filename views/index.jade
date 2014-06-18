@@ -3,8 +3,8 @@ extends layout
 block content
   if syncing
     h1.yes= title
-    br
     a(href="/kill" id="kill") Kill the current Rsync
+    br
   else
     h1.no= title
   if disabled
