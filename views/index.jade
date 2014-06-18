@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  if syncing
+    h1.yes= title
+    br
+    a(href="/kill" id="kill") Kill the current Rsync
+  else
+    h1.no= title
+  if disabled
+    input(type="checkbox" id="status" name="status" class="js-switch")
+  else
+    input(type="checkbox" id="status" name="status" class="js-switch" checked)
+
+  label(for="status")  Enable/Disabled Rsync
